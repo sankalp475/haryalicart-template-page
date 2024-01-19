@@ -19,11 +19,29 @@ section.banner {
     margin-top: 5rem;
     width: 100%;
     background: linear-gradient(to bottom, rgba(0, 0, 0, 0.404), rgba(0, 0, 0, 0.712)), url(../assets/images/green-field-tree-blue-skygreat-as-backgroundweb-banner-generative-ai.jpg) no-repeat 50% 20% / cover;
-    height: 60vh;
+    height: 75vh;
     display: flex;
     justify-content: center;
     align-items: center;
     position: relative;
+    /* background-attachment: fixed; */
+}
+
+.bottom-pattern {
+    position: relative;
+}
+
+.bottom-pattern {
+    --wpr-bg-: url(../assets/images/1.png);
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 105px;
+    left: 0;
+    top: -55px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-image: var(--wpr-bg-);
 }
 
 .wrapper {
@@ -48,7 +66,7 @@ div.logo-box {
     border-radius: 50px;
 }
 
-div.product-banner .logo-box img {
+.logo-box img {
     width: 100%;
     object-position: bottom;
     position: relative;
@@ -143,12 +161,10 @@ div.icon>ol li>a {
 }
 
 .products .product-item>.image-wrapper {
-    display: flex;
-    max-width: 45%;
+    display: flex;  
     position: relative;
     overflow: hidden;
     transform-origin: center;
-
 }
 
 .products .product-item>.image-wrapper:hover img {
@@ -177,7 +193,7 @@ div.icon>ol li>a {
     text-transform: capitalize;
 }
 
-.product-item .product-info h2 + p {
+.product-item .product-info h2+p {
     font-size: 1.2rem;
     max-width: 99%;
     line-height: 1.5rem;
@@ -185,6 +201,7 @@ div.icon>ol li>a {
     opacity: .5;
     margin-bottom: 10px;
 }
+
 .product-info .bold-label {
     font-weight: 800;
     text-transform: capitalize;
@@ -192,11 +209,11 @@ div.icon>ol li>a {
 }
 
 .product-info ul {
-   /* margin: .5rem 0; */
-   text-decoration: none;
-   list-style:decimal;
-   /* line-height: 1.5rem; */
-   color: rgb(63, 63, 63);
+    /* margin: .5rem 0; */
+    text-decoration: none;
+    list-style: decimal;
+    /* line-height: 1.5rem; */
+    color: rgb(63, 63, 63);
 }
 
 .product-info button {
@@ -211,9 +228,80 @@ div.icon>ol li>a {
     transition: .5s linear;
     font-size: 1.2rem;
     font-weight: 700;
-    font-family:Arial, Helvetica, sans-serif;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
-.product-info button:hover  {
-   box-shadow: none;
+.product-info button:hover {
+    box-shadow: none;
+}
+
+footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1.5rem;
+    padding: 0 1.5rem;
+}
+
+footer .logo-box {
+    margin: 1.5rem 0 0 0;
+    box-shadow: 7px 6px 25px -1px rgba(92, 89, 89, 0.329);
+}
+
+footer nav ul {
+    display: flex;
+    gap: 1rem;
+    padding: 1.5rem 0 0 0;
+}
+
+footer nav ul li {
+    list-style: none;
+    text-transform: capitalize;
+    font-size: 1.2rem;
+    cursor: pointer;
+}
+
+footer nav+p {
+    font-size: 1.2rem;
+    /* letter-spacing: .1rem; */
+    opacity: .7;
+    padding: 1.5rem;
+}
+
+@media (max-width:558px) {
+    .product-banner {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+    }
+
+    .right-header {
+        flex-direction: column;
+        text-align: center;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .product-item {
+        flex-direction: column;
+        justify-content: stretch;
+        align-items: stretch;
+    }
+    .product-item .image-wrapper img {
+        height: 350px;
+    }
+
+    .product-item .image-wrapper {
+        max-width: 100% !important;
+    }
+
+    .product-item .product-info {
+        max-width: 100%;
+    }
+    footer nav ul {
+       flex-direction: column;
+       text-align: center;
+    }
 }
