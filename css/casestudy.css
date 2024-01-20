@@ -71,6 +71,7 @@ div.logo-box {
 .logo-box img {
     width: 100%;
     object-position: bottom;
+    object-fit: cover;
     position: relative;
     top: 19px;
 }
@@ -172,14 +173,12 @@ div.icon>ol li>a {
 
 .image {
     width: 100%;
-    height: 30rem;
-    /* background-color: red; */
     margin: 1.5rem 0;
 }
 
 .image img {
     width: 100%;
-    height: 100%;
+    object-fit: cover;
     border-radius: 0 20%;
     box-shadow: 10px -10px 0 0 black;
 }
@@ -237,27 +236,37 @@ footer nav+p {
     main.casestudy {
         margin: 2rem 0;
     }
-    .info h1 + p {
+
+    .info h1+p {
         max-width: 75%;
     }
+
     .casestudy-component {
         display: flex;
         justify-content: space-between;
         gap: 2rem;
         /* flex-direction: row; */
     }
+   
     .image {
-        max-width: 40%;
+        display: flex;
+        flex:1 0 40%;
     }
-    .casestudy-component:nth-child(2n){
+
+
+    .image img {
+        flex-shrink: 0;
+    }
+
+    .casestudy-component:nth-child(2n) {
         flex-direction: row-reverse;
     }
 
     .casestudy-component .info {
-        width:80%
+        width: 80%
     }
 
-    footer nav ul  {
+    footer nav ul {
         flex-direction: row;
     }
 }
